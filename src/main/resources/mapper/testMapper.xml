@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kr.co.upcoding.mapper.TestMapper">
+
+    <insert id="testInsert" parameterType="TestVO">
+        Insert INTO Test2 values('${nickname}', '${name}')
+    </insert>
+    
+    <delete id="testDelete" parameterType="TestVO">
+    	Delete from Test2 where name='${name}'
+    </delete>
+
+
+</mapper>
