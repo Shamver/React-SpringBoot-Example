@@ -36,7 +36,6 @@ public class AES256Cipher {
     }
 
     private AES256Cipher(){
-        System.out.println(secretKey);
         IV = secretKey.substring(0,16);
     }
 
