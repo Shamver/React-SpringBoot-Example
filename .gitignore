@@ -10,6 +10,9 @@
 .springBeans
 .sts4-cache
 
+### Node Module ###
+/node_modules/
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
