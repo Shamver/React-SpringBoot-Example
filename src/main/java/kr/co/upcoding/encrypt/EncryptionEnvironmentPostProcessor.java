@@ -19,18 +19,24 @@ public class EncryptionEnvironmentPostProcessor implements EnvironmentPostProces
         try {
             // 암호화 한 문자열 보기 ( datasource의 정보를 하단 인자에 넣어주세요.)
             if(!QuestionDataSourceEncryptedYN()) {
-
-                System.out.print("암호화 할 username 을 입력해주세요 : ");
+                System.out.println("");
+                System.out.print("Enter Datasource username to encrypt : ");
                 String userName = sc.nextLine();
-                System.out.print("암호화 할 password 을 입력해주세요 : ");
+                System.out.print("Enter Datasource password to encrypt : ");
                 String password = sc.nextLine();
-                System.out.print("암호화 할 url 을 입력해주세요 : ");
+                System.out.print("Enter Datasource url to encrypt [ex) jdbc:<dbname>:<connection method>:@<ip>:<port>:<sid>] : ");
                 String url = sc.nextLine();
+
+                System.out.println("");
+                System.out.println("------- Encrypted Information -------");
                 System.out.println("encrypted spring.datasource.password : " + AES256Cipher.getInstance().AES_Encode(userName));
                 System.out.println("encrypted spring.datasource.username : " + AES256Cipher.getInstance().AES_Encode(password));
                 System.out.println("encrypted spring.datasource.url : " + AES256Cipher.getInstance().AES_Encode(url));
+                System.out.println("------- Encrypted Information -------");
+                System.out.println("");
 
-                System.out.println("해당 암호화된 정보들로 DataSource 수정 후 다시 서버를 재기동 해주시길 바랍니다.");
+                System.out.println("Encrypted with phrases on the then modify the data source and restart the server again, please.");
+                System.out.println("");
             }
 
                 props.put("spring.datasource.password", AES256Cipher.getInstance().AES_Decode(environment.getProperty("spring.datasource.password")));
@@ -50,17 +56,16 @@ public class EncryptionEnvironmentPostProcessor implements EnvironmentPostProces
 
 
         while(true){
-            System.out.print("DataSource 의 암호화는 권장되는 사항입니다. 프로퍼티 DataSource 정보에 암호화가 되어있습니까? (y/n) : ");
+            System.out.print("Encrypting the data source is a recommended practice. Is the Propriety DataSource encrypted? (y/n) : ");
             String ans = sc.nextLine().toLowerCase();
 
             if(ans.equals("n") )
                 return false;
             if(ans.equals("y")){
-                System.out.println("ㅎㅇ");
                 return true;
             }
             else {
-                System.out.println("정확한 값을 입력해주세요.");
+                System.out.println("Please enter the correct value.");
             }
         }
 
