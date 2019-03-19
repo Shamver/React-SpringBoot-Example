@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: oracle.jdbc.OracleDriver
-    url: "c9kdtZ4l6AgUTt1OOtC5abItOTlzrB/gYdnvGqz8kgXV/TVFdGh7jRjc+97KIOxU"
-    username: "osiojoU9ky18vV8lwyzBzg=="
-    password: "Z8FbuaKCyjOJkpUSOZo5ZQ=="
+    url: "type encrypted url"
+    username: "type encrypted username"
+    password: "type encrypted password"
   http:
     encoding:
       charset:    UTF-8
