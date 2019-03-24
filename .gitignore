@@ -13,6 +13,9 @@
 ### Node Module ###
 /node_modules/
 
+### JSX build js ###
+/src/main/webapp/js/react/
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
