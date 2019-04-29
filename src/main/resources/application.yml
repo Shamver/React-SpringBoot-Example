@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: oracle.jdbc.OracleDriver
-    url: "type encrypted url"
-    username: "type encrypted username"
-    password: "type encrypted password"
+    url: "c9kdtZ4l6AgUTt1OOtC5aetX+FwlaQtj92exzbwm28oMiOarjk4Twk7rrBikc8B7"
+    username: "1JQrJLS5kCF2sbM9L3mT5w=="
+    password: "kzFgh/OxvV8sA6UPnmKRiw=="
   http:
     encoding:
       charset:    UTF-8
@@ -13,7 +13,7 @@ spring:
       suffix:     .jsp
       
 server:
-  port : 9080
+  port : 8080
   tomcat:
     uri-encoding: UTF-8
     
